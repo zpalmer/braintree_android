@@ -340,6 +340,9 @@ public class BraintreeFragment extends Fragment {
             case AndroidPay.ANDROID_PAY_REQUEST_CODE:
                 AndroidPay.onActivityResult(this, resultCode, data);
                 break;
+            case 100:
+                VisaCheckout.onActivityResult(this, resultCode, data);
+                break;
         }
 
         if (resultCode == Activity.RESULT_CANCELED) {
