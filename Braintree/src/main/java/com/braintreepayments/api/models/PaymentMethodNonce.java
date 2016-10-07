@@ -155,6 +155,8 @@ public abstract class PaymentMethodNonce implements Parcelable {
                 VenmoAccountNonce venmoAccountNonce = new VenmoAccountNonce();
                 venmoAccountNonce.fromJson(json);
                 return venmoAccountNonce;
+            case VisaCheckoutPaymentMethodNonce.TYPE:
+                return VisaCheckoutPaymentMethodNonce.fromJson(json.toString());
             default:
                 return null;
         }
