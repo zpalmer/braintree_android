@@ -8,10 +8,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricGradleTestRunner;
+import org.robolectric.RobolectricTestRunner;
 
 import static junit.framework.Assert.assertEquals;
 
-@RunWith(RobolectricGradleTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class VisaCheckoutShippingAddressUnitTest {
 
     private VisaCheckoutShippingAddress mVisaCheckoutShippingAddress;
@@ -24,7 +25,7 @@ public class VisaCheckoutShippingAddressUnitTest {
                .put("streetAddress", "streetAddress")
                .put("locality", "locality")
                .put("region", "region")
-               .put("postalCode", "firstName")
+               .put("postalCode", "postalCode")
                .put("countryCode", "countryCode");
 
         mVisaCheckoutShippingAddress = new VisaCheckoutShippingAddress(sampleShippingAddress);
