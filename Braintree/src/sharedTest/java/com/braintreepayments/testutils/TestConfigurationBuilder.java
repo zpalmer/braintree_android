@@ -332,5 +332,10 @@ public class TestConfigurationBuilder extends JSONBuilder {
             put(externalClientId);
             return this;
         }
+
+        public TestVisaCheckoutConfigurationBuilder supportedCardTypes(String... supportedCardTypes) {
+            put(new JSONArray(Arrays.asList(supportedCardTypes)));
+            return this;
+        }
     }
 }
