@@ -74,6 +74,7 @@ allprojects {
 
     apply plugin: 'signing'
     signing {
+        required { gradle.taskGraph.hasTask("uploadArchives") }
         sign configurations.archives
     }
 
