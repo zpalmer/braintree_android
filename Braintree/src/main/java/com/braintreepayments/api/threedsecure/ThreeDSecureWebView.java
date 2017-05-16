@@ -10,6 +10,8 @@ import android.webkit.WebView;
 
 import com.braintreepayments.api.internal.BraintreeHttpClient;
 
+import android.webkit.CookieManager;
+
 @SuppressLint("SetJavaScriptEnabled")
 public class ThreeDSecureWebView extends WebView {
 
