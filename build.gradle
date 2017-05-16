@@ -37,7 +37,7 @@ allprojects {
     uploadArchives {
         repositories {
             mavenDeployer {
-                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+                //beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
                 repository(url: 'https://oss.sonatype.org/service/local/staging/deploy/maven2/') {
                     authentication(userName: sonatypeUsername, password: sonatypePassword)
@@ -75,10 +75,10 @@ allprojects {
     }
 
 
-    apply plugin: 'signing'
-    signing {
-        sign configurations.archives
-    }
+    //apply plugin: 'signing'
+    //signing {
+    //    sign configurations.archives
+    //}
 
     version = '2.5.3-SNAPSHOT'
     ext {
